@@ -1,0 +1,19 @@
+WOOHOO WEBPAGE. COOL
+
+
+<H1> I'M AWESOME </H1>
+<P>GO SPURS GO</P>
+
+
+you get it. 
+save it.
+
+
+
+
+
+
+
+
+
+again. we see the "commit"; this is essentially changing the repository.
