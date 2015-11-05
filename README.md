@@ -9,7 +9,7 @@ fork your own copy. when you make major changes, pull request it and add notes.
 ## for divided workloads. 
 use this master as a starting point
 
-::> create a <fork> this repository to make your own branch repository specific for your tasks.
+::> create a fork from master repository to make your own repo specific for your tasks.
 
 ::> once work is ready to add to master branch. <pull request> to origin/master.
 
