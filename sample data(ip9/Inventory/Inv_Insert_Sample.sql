@@ -1,0 +1,2 @@
+INSERT INTO [Inventory] (ProdName, BrandName, Price, Description, Units, Category, Image_Name, Image)
+VALUES ('BCAA PRO', 'BCAA', '41.99', '64oz Glutamine support', '2000', 'Protein', 'AminoX-Pro.jpg', (SELECT * FROM OPENROWSET(BULK N'C:\Users\Milky\Dropbox\sample data(ip9\Inventory\BCAA_Pro.jpg', SINGLE_BLOB) AS Image))

@@ -20,10 +20,13 @@ Swole Frog Gym Members only website & online retailer prototype
 >>Visual Studio
 >>Microsoft SQL Database Engine
 >>IMPORTANT: this repo uses outdated database connetion strings. (TO DO)
+>>Test Data in designated folder
+>>Implement SQL queries provided.
 
 ####Platform::>
 >>ASP.NET - C#
 >>MSSQL Database Engine
+
 
 
 **Rights and Access to the source code are permitted upon request and permission given by the owner**
