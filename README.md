@@ -1,25 +1,30 @@
-# Gym-Site-IP
-Internet Programming project for us all to branch. works easier.
+#Gym-Site-IP
+Swole Frog Gym Members only website & online retailer prototype
+**************************
+
+##Contributors::>
+>>Aime Habihirwe
+>>Minh Nguyen
+>>Cameron Heilman
 
 
-This works well to split up each section. 
-fork your own copy. when you make major changes, pull request it and add notes.
 
-# Practices
-## for divided workloads. 
-use this master as a starting point
+##NOTES::>
+###Implementation
+>>Local Implementation only for now. 
+>>This repository is strictly for viewing sourcecode for now.
+>>online example will come soon (TO DO)
 
-::> create a fork from master repository to make your own repo specific for your tasks.
+####Requirements
+>>Windows 
+>>Visual Studio
+>>Microsoft SQL Database Engine
+>>IMPORTANT: this repo uses outdated database connetion strings. (TO DO)
 
-::> once work is ready to add to master branch. <pull request> to origin/master.
+####Platform::>
+>>ASP.NET - C#
+>>MSSQL Database Engine
 
-::> this leaves the owners of master review added files and MERGE master repo with the forked repo.
 
+**Rights and Access to the source code are permitted upon request and permission given by the owner**
 
-## Usage Example
-cameron's tasks are the store. 
-->cameron forks master repository and names it (Gym-Site-IP-Store).
-
-->Cameron <commits> new web pages to his forked repo.
-
-->After which cameron can <pull request> his repo with the main repository.
