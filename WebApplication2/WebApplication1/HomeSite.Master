@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeSite.Master.cs" Inherits="WebApplication1.Site2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="Content/Default.css" />
+
+    <style>
+      #map {
+        width: 330px;
+        height: 270px;
+      }
+        </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: new google.maps.LatLng(27.711469, -97.324126),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+   <meta charset='utf-8' />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="Content/styles.css" />
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="Scripts/script.js"></script>
+
+</head>
+<body style="background-color:white">
+
+    <form id="form1" runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" runat="server" href="Home.aspx"><img src="../Content/SwolefrogMain.png" width="35"/> SwoleFrog</a> 
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="Home.aspx">Home</a></li>
+                        <li><a runat="server" href="~/Membership.aspx">Membership</a></li>
+                        <li><a runat="server" href="~/About.aspx">About</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <li><a runat="server" id="storeanchor" href="#">Store</a></li>
+                        <li><a runat="server" href="#bottom">Hours</a></li>
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a runat="server" id="aregister" href="Register.aspx">
+                            <asp:Label ID="lblregister" runat="server" Text="Register" Visible="true"></asp:Label>
+                            </a>
+                        </li>
+                        <li>
+                            <a runat="server" id="alogin" href="Login.aspx">
+                            <asp:Label ID="lbllogin" runat="server" Text="Login" Visible="true"></asp:Label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    <br />
+    <br />
+
+
+    
+        <br />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+
+        <br />
+        <footer class="panel-footer">
+            <div class="container">
+           
+            <div class="row">
+                
+                <div class="col-md-4"><a name="bottom"></a><p><h4> INFO: </h4><br /> 
+                            Contact us to learn more about the<br />
+                            GymLord fitness community <br /> <br />
+                            Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (361) 123-4567 <br />
+                            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; info@swolefrog.com <br />
+                            Address:&nbsp;&nbsp;&nbsp; 6700 Ocean Drive <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corpus Christi, TX 78412 <br />                             
+                                         </p></div>
+                <div class="col-md-5"><asp:Label ID="Label1" runat="server"><h4>LOCATE US:</h4></asp:Label><br /><div id="map">&nbsp;&nbsp;</div></div>
+                <div class="col-md-3"><a name="bottom"></a><p><h4>HOURS: </h4> <br />
+                    Monday - Thursday 6AM - 11PM <br />
+                    Friday 6AM - 10PM <br />
+                    Saturday - Sunday 8AM - 7PM <br />
+                    </p></div>
+                
+            </div>
+
+
+            <hr />
+            <p style="text-align:center"><a style="align-content:center; text-align:center;">&copy; <%: DateTime.Now.Year %> - GymLord.  All Rights Reserved</a></p>
+            
+             
+            </div>
+       </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/LoginNavBar.master" AutoEventWireup="true" CodeBehind="NestedMasterPage4.master.cs" Inherits="WebApplication1.NestedMasterPage4" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+     <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!doctype html>
+<html>
+  <body>
+      
+                 <div id='cssmenu'>
+                <ul>
+                       <li><a href="/Employee/EmployeeHome.aspx"><span>Employee Home</span></a></li>
+                        <li><a href="/Employee/Users.aspx"><span>Manage Users</span></a></li>
+                       <li><a href="/Employee/Employee.aspx"><span>Manage your Account</span></a></li>
+                        
+                </ul>
+                </div>
+                   <asp:ContentPlaceHolder ID="Employee1" runat="server">
+
+</body>
+                </asp:ContentPlaceHolder>
+</asp:Content>

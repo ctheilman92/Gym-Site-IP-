@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/LoginNavBar.master" AutoEventWireup="true" CodeBehind="AdminNevbar.master.cs" Inherits="WebApplication1.NestedMasterPage2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+      
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!doctype html>
+<html>
+  <body>
+      
+                 <div id='cssmenu'>
+                <ul>
+                       <li><a href="/Admin/AdminHome.aspx"><span>Admin Home</span></a></li>
+                        <li class='active has-sub'><a href="/Admin/Others.aspx"><span>Database Management</span></a>
+                          <ul>
+                             <li><a href="/Admin/Billing.aspx"><span>Billing</span></a></li>
+                             <li><a href="/Admin/Cart.aspx"><span>Cart</span></a></li>
+                              <li><a href="/Admin/Inventory.aspx"><span>Inventory</span></a></li>
+                              <li><a href="/Admin/Orders.aspx"><span>Orders</span></a></li>
+                               <li><a href="/Admin/Shipping.aspx"><span>Shipping</span></a></li>
+                          </ul>
+                       </li>
+                       <li><a href="/Admin/Employee.aspx"><span>Employee Info</span></a></li>
+                        <li><a href="/Admin/User.aspx"><span>User Info</span></a></li>
+                        <li><a href="/Admin/Admin.aspx"><span>Admin info</span></a></li>   
+                </ul>
+                </div>
+                   <asp:ContentPlaceHolder ID="Admin1" runat="server">
+                </asp:ContentPlaceHolder>
+      </body>
+</asp:Content>

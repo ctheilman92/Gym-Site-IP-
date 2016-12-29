@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/LoginNavBar.master" AutoEventWireup="true" CodeBehind="StoreFront.master.cs" Inherits="WebApplication1.StoreFront" %>
+
+
+
+
+
+
+
+
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+
+<!--Principal Design Reference for shop"http://www.vitaminshoppe.com/c/build-muscle-exercise-workout-support-muscle-building-formulas/N-7ve" -->
+        
+
+    <link href="Content/alt.css" type="text/css" rel="stylesheet" />
+
+            <!--js tab showing content-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>    
+    <script src="Scripts/tabs.js"></script>
+    <script src="Scripts/carousel.js"></script>
+    <script src="Scripts/StoreScroll.js"></script>
+
+    <style>
+        .fixedpos {
+                position:absolute;
+                top:auto;
+                bottom:0px;
+        }
+
+
+      .carousel-inner > .item > img,
+      .carousel-inner > .item > a > img {
+          width: 100%;
+          height:210px;
+          margin: 0 auto;
+      }
+        .auto-style1 {
+            position: relative;
+            min-height: 1px;
+            float: left;
+            width: 8%;
+            left: 0px;
+            top: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="shopNestedHeadCPH" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</asp:Content>
+
+
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container">
+    <div class="well well-sm">
+        <div class="row" style="padding-bottom:2px">
+
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SomeeHost %>" SelectCommand="SELECT * FROM [Inventory]"></asp:SqlDataSource>
+
+                <!--sql database online @ somee.com-->
+                
+               
+                <div class="col-lg-9 left" style="left:10px;">
+                    <span class="fontawesome-search">Search:
+                <input class="input-sm" type="search" style="width: 180px" /></span>
+                </div>
+
+                <!--try using modal or popover for displaying cart instead of another page.
+                                    add a button to modal for checkout -->
+
+                <!--PAGE SCALING NEEDS TO BE FIXED FOR BUTTONS-->
+                <div class="col-lg-3 right" style="left:100px; position:relative;">
+                    <div class="row">
+                        <div class="col-lg-1" style="right:20px; margin-top: 3px;">
+                            <span class="fontawesome-shopping-cart btn btn-info btn-xs">&nbsp<asp:Button ID="cartbtn" CssClass="btn btn-info btn-xs" runat="server" Text="Cart" OnClick="cartbtn_Click" BorderStyle="None" BackColor="#5BC0DE" /></span>
+                        </div>
+                        <div class="col-lg-2" style="left: 20px; margin-top: 3px;">
+                            <span class="fontawesome-star btn btn-info btn-xs">&nbsp<asp:Button ID="checkoutbtn" CssClass="btn btn-info btn-xs" runat="server" Text="Checkout" OnClick="cartbtn_Click" BorderStyle="None" BackColor="#5BC0DE" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    
+    <br />
+
+</div>
+        <!--use the delete insert & update commands
+            or we could use ajax to keep it on hte same page-->
+   
+    <asp:ContentPlaceHolder ID="ShopNestedCPH" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+
+</asp:Content>
+
+

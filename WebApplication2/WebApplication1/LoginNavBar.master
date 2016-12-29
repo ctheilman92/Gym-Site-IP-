@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/HomeSite.Master" AutoEventWireup="true" CodeBehind="LoginNavBar.master.cs" Inherits="WebApplication1.NestedMasterPage1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            
+            <style>
+                
+            </style>
+        </head>
+
+    <body >
+        <div  style="width:10%; position:fixed; left: 90%; float:left">
+        <br />
+        <br />
+        <div >
+            <ul class="nav navbar-right" >
+                <li style="background-color:cyan; margin-bottom: 5%"><a runat="server" id="awelcome" href="ManageAccount.aspx">Welcome <asp:Label ID="lbluser" runat="server" Text=" to SwoleFrog!" Visible="true"></asp:Label></a></li>
+                <li style="background-color:cyan; margin-bottom: 5%">
+                    <asp:LinkButton ID="linkLogout" runat="server" OnClick="LinkButton1_Click" Visible="false">Logout</asp:LinkButton></li>
+            </ul>
+                
+        </div>
+    </div>
+    <div class="container body-content" >    
+        <br />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>   
+    </div>
+     <div class="container body-content" >
+       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+       </div> 
+
+    </body>
+
+    </html>
+</asp:Content>
+ 
