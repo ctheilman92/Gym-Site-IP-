@@ -1,20 +1,20 @@
-#Gym-Site-IP
+**Gym-Site-IP**
 Swole Frog Gym Members only website & online retailer prototype
 
 
-##Contributors
+**Contributors**
 :=Aime Habihirwe
 :=Minh Nguyen
 :=Cameron Heilman
 
 
 
-##Implementation
+**Implementation**
 :=Local Implementation only for now. 
 :=This repository is strictly for viewing sourcecode for now.
 :=online example will come soon (TO DO)
 
-##Requirements
+**Requirements**
 :=.NET 3.5^
 :=Microsoft SQL Database Engine
 :=Test Data in designated folder
